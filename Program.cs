@@ -19,7 +19,7 @@ app.Use(async (context, next) =>
     // Strict security headers
     context.Response.Headers[HeaderNames.XFrameOptions] = "DENY";
     context.Response.Headers[HeaderNames.XContentTypeOptions] = "nosniff";
-    context.Response.Headers[HeaderNames.ReferrerPolicy] = "no-referrer";
+    context.Response.Headers["Referrer-Policy"] = "no-referrer";
     context.Response.Headers["X-XSS-Protection"] = "1; mode=block";
     context.Response.Headers["Permissions-Policy"] = "geolocation=(), microphone=()";
     context.Response.Headers["X-Content-Security-Policy"] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'";
