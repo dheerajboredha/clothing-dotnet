@@ -23,4 +23,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
       - name: Publish .NET project
-        run: dotnet publish -c Release src/Presentation/Nop.Web/Nop.Web.csproj -o dheeraj
+        run: dotnet publish -c Release SixteenClothing.csproj -o dheeraj
+
+        # src/Presentation/Nop.Web/Nop.Web.csproj
